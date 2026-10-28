@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salt Bread | Roti Garam Butter, Hangat dari Oven</title>
+
+  <!-- Font Google (butuh internet). Kalau offline, otomatis pakai font cadangan di style.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 (butuh internet). Dimuat sebelum style.css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER & NAVIGASI ===== -->
+  <header class="topbar">
+    <div class="wadah topbar-isi">
+      <a href="#beranda" class="logo">Salt<span>Bread</span></a>
+
+      <nav id="mainNav" aria-label="Navigasi utama">
+        <a href="#beranda">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#testimoni">Testimoni</a>
+        <a href="#pemesanan">Pesan</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+
+      <div class="aksi">
+        <button class="cart" id="cartBtn" type="button" aria-label="Lihat keranjang">
+          🛒 <span id="cartCount">0</span>
+        </button>
+        <a href="#pemesanan" class="btn btn-kecil">Pesan Sekarang</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="beranda" class="hero">
+      <!-- hiasan latar: bentuk organik oranye -->
+      <div class="blob blob-muda" aria-hidden="true"></div>
+      <div class="blob blob-besar" aria-hidden="true"></div>
+      <div class="titik" aria-hidden="true"></div>
+
+      <div class="wadah hero-grid">
+        <div class="hero-teks">
+          <h1>Roti Garam Favoritmu, Hangat dan Segar dari Oven</h1>
+          <p>Salt Bread dipanggang dalam jumlah kecil sepanjang pagi: luar renyah berbutter, dalam lembut berlapis, dengan taburan garam laut di atasnya.</p>
+          <a href="#pemesanan" class="btn">Pesan Sekarang <span aria-hidden="true">→</span></a>
+        </div>
+
+        <!-- Ganti <span class="placeholder"> dengan: <img src="assets/hero.jpg" alt="Salt bread hangat"> -->
+        <figure class="hero-foto">
+          <span class="placeholder" aria-hidden="true">🥐</span>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== KARTU INFO ===== -->
+    <section class="info" aria-label="Informasi toko">
+      <div class="wadah info-grid">
+        <article class="kartu info-kartu">
+          <span class="ikon" aria-hidden="true">🕖</span>
+          <div>
+            <h2>Setiap hari, 07.00 – 20.00</h2>
+            <p>Jam buka</p>
+          </div>
+        </article>
+        <article class="kartu info-kartu">
+          <span class="ikon" aria-hidden="true">📍</span>
+          <div>
+            <h2>Jl. Contoh No. 12</h2>
+            <p>Petunjuk arah</p>
+          </div>
+        </article>
+        <article class="kartu info-kartu">
+          <span class="ikon" aria-hidden="true">📞</span>
+          <div>
+            <h2>0812-0000-0000</h2>
+            <p>Pesan lewat telepon</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== CARA PESAN ===== -->
+    <section id="cara-pesan" class="cara">
+      <div class="wadah">
+        <h2 class="judul-section">Cara Pesan</h2>
+        <p class="sub-section">Tiga langkah, rotimu langsung siap.</p>
+
+        <div class="cara-grid">
+          <article class="kartu cara-kartu">
+            <span class="ikon ikon-besar" aria-hidden="true">🥖</span>
+            <h3>1. Pilih roti</h3>
+            <p>Pilih varian favoritmu dari menu dan tekan tombol tambah.</p>
+          </article>
+          <article class="kartu cara-kartu">
+            <span class="ikon ikon-besar" aria-hidden="true">💳</span>
+            <h3>2. Bayar</h3>
+            <p>Bayar tunai di toko atau lewat transfer dan dompet digital.</p>
+          </article>
+          <article class="kartu cara-kartu">
+            <span class="ikon ikon-besar" aria-hidden="true">🛵</span>
+            <h3>3. Ambil atau antar</h3>
+            <p>Ambil di toko saat masih hangat, atau minta diantar ke rumah.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MENU ===== -->
+    <section id="menu" class="menu">
+      <div class="wadah">
+        <h2 class="judul-section">Jelajahi Menu Terbaik Kami</h2>
+        <p class="sub-section">Enam varian salt bread yang paling sering habis sebelum siang.</p>
+
+        <div class="filter" role="group" aria-label="Filter menu">
+          <button type="button" class="aktif" data-filter="semua" aria-pressed="true">Semua</button>
+          <button type="button" data-filter="gurih" aria-pressed="false">Gurih</button>
+          <button type="button" data-filter="manis" aria-pressed="false">Manis</button>
+        </div>
+
+        <div class="menu-grid">
+          <article class="kartu menu-card" data-kategori="gurih">
+            <figure class="menu-foto"><span class="placeholder" aria-hidden="true">🥖</span></figure>
+            <div class="menu-isi">
+              <h3>Original Salt Bread</h3>
+              <p>Butter gurih dan garam laut, rasa klasik yang bikin ketagihan.</p>
+              <div class="menu-bawah">
+                <span class="harga">Rp 12.000</span>
+                <span class="bintang" aria-label="Rating 5 dari 5">★★★★★</span>
+                <button class="btn-tambah" type="button" data-nama="Original Salt Bread" aria-label="Tambah Original Salt Bread ke keranjang">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="kartu menu-card" data-kategori="gurih">
+            <figure class="menu-foto"><span class="placeholder" aria-hidden="true">🧀</span></figure>
+            <div class="menu-isi">
+              <h3>Cheese Salt Bread</h3>
+              <p>Isi keju leleh di dalam, taburan keju panggang di atasnya.</p>
+              <div class="menu-bawah">
+                <span class="harga">Rp 15.000</span>
+                <span class="bintang" aria-label="Rating 5 dari 5">★★★★★</span>
+                <button class="btn-tambah" type="button" data-nama="Cheese Salt Bread" aria-label="Tambah Cheese Salt Bread ke keranjang">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="kartu menu-card" data-kategori="gurih">
+            <figure class="menu-foto"><span class="placeholder" aria-hidden="true">🧄</span></figure>
+            <div class="menu-isi">
+              <h3>Garlic Butter Salt Bread</h3>
+              <p>Olesan butter bawang putih yang harum, teman kopi yang pas.</p>
+              <div class="menu-bawah">
+                <span class="harga">Rp 16.000</span>
+                <span class="bintang" aria-label="Rating 4 dari 5">★★★★☆</span>
+                <button class="btn-tambah" type="button" data-nama="Garlic Butter Salt Bread" aria-label="Tambah Garlic Butter Salt Bread ke keranjang">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="kartu menu-card" data-kategori="gurih">
+            <figure class="menu-foto"><span class="placeholder" aria-hidden="true">🥚</span></figure>
+            <div class="menu-isi">
+              <h3>Egg Mayo Salt Bread</h3>
+              <p>Telur mayo lembut yang diselipkan ke roti yang masih hangat.</p>
+              <div class="menu-bawah">
+                <span class="harga">Rp 17.000</span>
+                <span class="bintang" aria-label="Rating 4 dari 5">★★★★☆</span>
+                <button class="btn-tambah" type="button" data-nama="Egg Mayo Salt Bread" aria-label="Tambah Egg Mayo Salt Bread ke keranjang">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="kartu menu-card" data-kategori="manis">
+            <figure class="menu-foto"><span class="placeholder" aria-hidden="true">🍫</span></figure>
+            <div class="menu-isi">
+              <h3>Choco Salt Bread</h3>
+              <p>Cokelat hitam yang lumer berpadu dengan asinnya garam.</p>
+              <div class="menu-bawah">
+                <span class="harga">Rp 15.000</span>
+                <span class="bintang" aria-label="Rating 5 dari 5">★★★★★</span>
+                <button class="btn-tambah" type="button" data-nama="Choco Salt Bread" aria-label="Tambah Choco Salt Bread ke keranjang">+</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="kartu menu-card" data-kategori="manis">
+            <figure class="menu-foto"><span class="placeholder" aria-hidden="true">🍯</span></figure>
+            <div class="menu-isi">
+              <h3>Honey Butter Salt Bread</h3>
+              <p>Madu dan butter yang meresap, manis di awal, asin di akhir.</p>
+              <div class="menu-bawah">
+                <span class="harga">Rp 16.000</span>
+                <span class="bintang" aria-label="Rating 4 dari 5">★★★★☆</span>
+                <button class="btn-tambah" type="button" data-nama="Honey Butter Salt Bread" aria-label="Tambah Honey Butter Salt Bread ke keranjang">+</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORM PEMESANAN (Bootstrap) ===== -->
+    <section id="pemesanan" class="pemesanan">
+      <div class="wadah">
+        <h2 class="judul-section">Form Pemesanan</h2>
+        <p class="sub-section">Isi data di bawah, rotimu kami siapkan hangat dari oven.</p>
+
+        <form id="formPesan" class="kartu form-pesan p-4 p-md-5 mx-auto" novalidate>
+          <div class="row g-3">
+
+            <!-- Input teks -->
+            <div class="col-md-6">
+              <label for="pNama" class="form-label">Nama lengkap</label>
+              <input type="text" class="form-control" id="pNama" placeholder="Contoh: Salwa" autocomplete="name">
+              <div class="invalid-feedback">Nama minimal 3 karakter.</div>
+            </div>
+
+            <div class="col-md-6">
+              <label for="pHp" class="form-label">Nomor HP</label>
+              <input type="tel" class="form-control" id="pHp" placeholder="08xxxxxxxxxx" autocomplete="tel">
+              <div class="invalid-feedback">Isi nomor HP yang valid, misalnya 081234567890.</div>
+            </div>
+
+            <!-- SELECT -->
+            <div class="col-md-8">
+              <label for="pRoti" class="form-label">Pilih roti</label>
+              <select class="form-select" id="pRoti">
+                <option value="" selected>-- Pilih varian --</option>
+                <option value="Original Salt Bread">Original Salt Bread - Rp 12.000</option>
+                <option value="Cheese Salt Bread">Cheese Salt Bread - Rp 15.000</option>
+                <option value="Garlic Butter Salt Bread">Garlic Butter Salt Bread - Rp 16.000</option>
+                <option value="Egg Mayo Salt Bread">Egg Mayo Salt Bread - Rp 17.000</option>
+                <option value="Choco Salt Bread">Choco Salt Bread - Rp 15.000</option>
+                <option value="Honey Butter Salt Bread">Honey Butter Salt Bread - Rp 16.000</option>
+              </select>
+              <div class="invalid-feedback">Pilih salah satu roti.</div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="pJumlah" class="form-label">Jumlah</label>
+              <input type="number" class="form-control" id="pJumlah" min="1" max="20" value="1">
+              <div class="invalid-feedback">Jumlah 1 sampai 20.</div>
+            </div>
+
+            <!-- RADIO BUTTON -->
+            <div class="col-12">
+              <span class="form-label d-block" id="labelMetode">Metode pengambilan</span>
+              <div role="radiogroup" aria-labelledby="labelMetode">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="metode" id="metodeAmbil" value="ambil">
+                  <label class="form-check-label" for="metodeAmbil">Ambil di toko</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="metode" id="metodeAntar" value="diantar">
+                  <label class="form-check-label" for="metodeAntar">Diantar ke rumah</label>
+                </div>
+              </div>
+              <div id="feedbackMetode" class="text-danger small mt-1 d-none">Pilih metode pengambilan.</div>
+            </div>
+
+            <!-- TEXTAREA (alamat) -->
+            <div class="col-12">
+              <label for="pAlamat" class="form-label">Alamat pengantaran</label>
+              <textarea class="form-control" id="pAlamat" rows="3" disabled
+                placeholder="Alamat hanya diisi jika memilih diantar"></textarea>
+              <div class="invalid-feedback">Tulis alamat lengkap (minimal 10 karakter).</div>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn">Kirim Pesanan</button>
+            </div>
+          </div>
+
+          <div id="hasilPesan" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== TENTANG ===== -->
+    <section id="tentang" class="tentang">
+      <div class="cincin" aria-hidden="true"></div>
+      <div class="wadah tentang-grid">
+        <figure class="tentang-foto">
+          <span class="placeholder" aria-hidden="true">🥐</span>
+        </figure>
+
+        <div class="tentang-teks">
+          <h2 class="judul-kiri">Roti Sederhana, Dikerjakan dengan Sungguh-sungguh</h2>
+          <p>Resep salt bread kami hanya butuh sedikit bahan. Karena itu mutu butter, ragi, dan waktu istirahat adonan menentukan segalanya.</p>
+          <ul class="poin">
+            <li>Adonan dibuat segar setiap pagi, tanpa pengawet.</li>
+            <li>Dipanggang bertahap, jadi roti selalu hangat saat diambil.</li>
+            <li>Garam laut ditaburkan tepat sebelum masuk oven.</li>
+          </ul>
+          <a href="#menu" class="btn">Lihat Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONI ===== -->
+    <section id="testimoni" class="testimoni">
+      <div class="wadah">
+        <h2 class="judul-section">Kata Mereka</h2>
+
+        <!-- Isi testimoni di bawah hanya contoh. Ganti dengan komentar asli. -->
+        <div class="slider">
+          <article class="testi aktif">
+            <p class="kutipan">Bagian bawahnya garing, dalamnya empuk banget. Aku beli lagi besok paginya.</p>
+            <p class="nama">Rani, pelanggan tetap</p>
+          </article>
+          <article class="testi">
+            <p class="kutipan">Cheese salt bread-nya juara. Kejunya masih meleleh waktu sampai rumah.</p>
+            <p class="nama">Dimas, mahasiswa</p>
+          </article>
+          <article class="testi">
+            <p class="kutipan">Cocok banget buat sarapan sebelum kuliah, dan harganya masuk akal.</p>
+            <p class="nama">Putri, pelanggan baru</p>
+          </article>
+        </div>
+
+        <div class="slider-kontrol">
+          <button type="button" id="testiPrev" aria-label="Testimoni sebelumnya">←</button>
+          <span id="testiNomor" aria-live="polite">1 / 3</span>
+          <button type="button" id="testiNext" aria-label="Testimoni berikutnya">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== KONTAK ===== -->
+    <section id="kontak" class="kontak">
+      <div class="wadah">
+        <h2 class="judul-section">Hubungi Kami</h2>
+        <p class="sub-section">Ada pertanyaan soal menu, pesanan dalam jumlah besar, atau kerja sama? Kami senang membantu.</p>
+
+        <div class="kontak-grid">
+
+          <!-- Kiri: informasi kontak (ganti semua data contoh dengan data aslimu) -->
+          <div class="kontak-info">
+            <article class="kartu kontak-item">
+              <span class="ikon" aria-hidden="true">📍</span>
+              <div>
+                <h3>Alamat</h3>
+                <p>Jl. Ahmad Yani No. 25 A<br></p>
+              </div>
+            </article>
+
+            <article class="kartu kontak-item">
+              <span class="ikon" aria-hidden="true">📞</span>
+              <div>
+                <h3>Telepon &amp; WhatsApp</h3>
+                <p>
+                  <a href="tel:+6281200000000">0812-0000-0000</a><br>
+                  <a href="https://wa.me/6281200000000" target="_blank" rel="noopener">Chat lewat WhatsApp</a>
+                </p>
+              </div>
+            </article>
+
+            <article class="kartu kontak-item">
+              <span class="ikon" aria-hidden="true">✉️</span>
+              <div>
+                <h3>Email</h3>
+                <p><a href="mailto:halo@saltbread.wa">halo@saltbread.wa</a></p>
+              </div>
+            </article>
+
+            <article class="kartu kontak-item">
+              <span class="ikon" aria-hidden="true">🕖</span>
+              <div>
+                <h3>Jam buka</h3>
+                <p>Senin – Minggu<br>07.00 – 20.00</p>
+              </div>
+            </article>
+
+            <article class="kartu kontak-item">
+              <span class="ikon" aria-hidden="true">📷</span>
+              <div>
+                <h3>Instagram</h3>
+                <p><a href="https://www.instagram.com/" target="_blank" rel="noopener">@saltbread.wa</a></p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Kanan: form kontak (Bootstrap) -->
+          <form id="formKontak" class="kartu form-pesan form-kontak p-4 p-md-5" novalidate>
+            <h3 class="h5 mb-3">Kirim pesan</h3>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="kNama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="kNama" placeholder="Nama kamu" autocomplete="name">
+                <div class="invalid-feedback">Nama minimal 3 karakter.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="kEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="kEmail" placeholder="nama@email.com" autocomplete="email">
+                <div class="invalid-feedback">Isi email yang valid, contoh: nama@email.com</div>
+              </div>
+
+              <div class="col-12">
+                <label for="kSubjek" class="form-label">Subjek</label>
+                <select class="form-select" id="kSubjek">
+                  <option value="" selected>-- Pilih subjek --</option>
+                  <option value="Pertanyaan menu">Pertanyaan menu</option>
+                  <option value="Pesanan dalam jumlah besar">Pesanan dalam jumlah besar</option>
+                  <option value="Kerja sama">Kerja sama</option>
+                  <option value="Kritik dan saran">Kritik dan saran</option>
+                </select>
+                <div class="invalid-feedback">Pilih salah satu subjek.</div>
+              </div>
+
+              <div class="col-12">
+                <label for="kPesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="kPesan" rows="4" placeholder="Tulis pesanmu di sini"></textarea>
+                <div class="invalid-feedback">Pesan minimal 10 karakter.</div>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn">Kirim Pesan</button>
+              </div>
+            </div>
+
+            <div id="hasilKontak" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <!-- Peta lokasi. Untuk peta asli: buka Google Maps, pilih Bagikan > Sematkan peta,
+             lalu tempel kode <iframe> di dalam div ini menggantikan teks placeholder.
+             Contoh: <iframe src="..." width="100%" height="320" style="border:0" loading="lazy" title="Peta lokasi Salt Bread"></iframe> -->
+        <div class="peta" role="img" aria-label="Tempat peta lokasi Salt Bread">
+          <div>
+            <span class="peta-ikon" aria-hidden="true">🗺️</span>
+            <p>Peta lokasi Salt Bread</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="wadah footer-grid">
+      <div>
+        <a href="#beranda" class="logo logo-footer">Salt<span>Bread</span></a>
+        <p>Roti garam butter, dipanggang setiap pagi dalam jumlah kecil.</p>
+      </div>
+      <div>
+        <h3>Jelajahi</h3>
+        <a href="#menu">Menu</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#testimoni">Testimoni</a>
+      </div>
+      <div>
+        <h3>Info</h3>
+        <a href="#cara-pesan">Cara pesan</a>
+        <a href="#pemesanan">Form pemesanan</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+      <div>
+        <h3>Kontak</h3>
+        <p>Jl. Ahmad Yani No.25 A<br>0812-0000-0000<br>halo@saltbread.wa</p>
+      </div>
+    </div>
+    <p class="hak-cipta">&copy; 2026 Salt Bread | Dibuat oleh <strong>Salwa</strong> | NIM <strong>A12.2025.07377</strong></p>
+  </footer>
+
+  <!-- Notifikasi kecil saat roti ditambahkan -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
